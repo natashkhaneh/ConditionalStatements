@@ -18,9 +18,12 @@ namespace ConditionalStatements
                 int grade = int.Parse(input);
 
                 // Displays message for if grade is 59 or below (F)
-                if (grade <= 59)
+                if ((grade >= 0) && (grade <= 59))
                 {
                     Console.WriteLine("Your expected grade is an F.");
+                    Console.WriteLine("Press any key to exit the program.");
+
+                    //Waits for the user to press a key  before exiting program.
                     Console.ReadKey(true);
                 }
 
@@ -28,6 +31,7 @@ namespace ConditionalStatements
                 else if ((grade >= 60) && (grade <= 69))
                 {
                     Console.WriteLine("Your expected grade is a D.");
+                    Console.WriteLine("Press any key to exit the program.");
                     Console.ReadKey(true);
                 }
 
@@ -35,6 +39,7 @@ namespace ConditionalStatements
                 else if ((grade >= 70) && (grade <= 79))
                 {
                     Console.WriteLine("Your expected grade is a C.");
+                    Console.WriteLine("Press any key to exit the program.");
                     Console.ReadKey(true);
                 }
 
@@ -42,6 +47,7 @@ namespace ConditionalStatements
                 else if ((grade >= 80) && (grade <= 89))
                 {
                     Console.WriteLine("Your expected grade is a B.");
+                    Console.WriteLine("Press any key to exit the program.");
                     Console.ReadKey(true);
                 }
 
@@ -49,16 +55,21 @@ namespace ConditionalStatements
                 else if (grade >= 90)
                 {
                     Console.WriteLine("Your expected grade is an A.");
+                    Console.WriteLine("Press any key to exit the program.");
+
                     Console.ReadKey(true);
                 }
-
+                // End of try statement
             }
 
+            // Displays a message if user input is not valid.
             catch
             {
-                Console.WriteLine("Please enter a grade greater than zero, check your input and try again! ");
+                Console.WriteLine("Invalid input! Please enter a valid grade greater than zero! ");
+                Console.WriteLine("Press any key to exit the program and try again.");
                 Console.ReadKey(true);
             }
+            //End of catch
         }
     }
 }
