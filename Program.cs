@@ -65,7 +65,7 @@ namespace ConditionalStatements
             // Displays a message if user input is not valid.
             catch
             {
-                Console.WriteLine("Invalid input! Please enter a valid grade greater than zero! ");
+                Console.WriteLine("Invalid input! Please enter a valid non-decimal grade greater than zero! ");
                 Console.WriteLine("Press any key to exit the program and try again.");
                 Console.ReadKey(true);
             }
